@@ -51,6 +51,8 @@ export default class Store extends EventTarget {
 
     let winner = null
 
+
+    //checking for a winner in a game by iterating over the players and their moves.
     for (const player of this.players) {
       const selectedSquareIds = state.currentGameMoves.filter(move => move.player.id === player.id
       ).map(move => move.squareId)
